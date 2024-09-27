@@ -1,0 +1,27 @@
+.CardMediaImage {
+    max-height: 100% !important;
+}
+
+label.PDFLabel {
+    margin-left: 10px;
+}
+.delete-btn-yes{
+    background-color: darkred !important;
+    color: white !important;
+    margin-left: 40px !important ;
+}
+.delete-btn-no{
+    background-color: gray !important;
+    color: white !important;
+    margin-left: 60px !important ;
+
+}
+.delete-btn-no:hover{
+    background-color: gray !important;
+    color: white !important;
+
+
+}
+.delete-btn-yes:hover{
+    background-color: darkred !important;
+}

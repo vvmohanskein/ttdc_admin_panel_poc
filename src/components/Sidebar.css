@@ -1,0 +1,60 @@
+.css-1edfpdg-MuiTypography-root {
+    font-family: 'Montserrat' !important;
+    /* color: #ffff !important; */
+    /* font-size: 15px !important; */
+}
+
+body {
+    font-family: 'Montserrat' !important;
+}
+
+.FontDefault{
+    font-family: 'Montserrat' !important;
+}
+
+
+.css-ihfej8-MuiAvatar-root {
+    width: 80px !important;
+    height: 75px !important;
+}
+/* .css-lsr6u8-MuiDrawer-docked .MuiDrawer-paper {
+    background-color: #971010 !important;
+} */
+
+.css-lsr6u8-MuiDrawer-docked .MuiDrawer-paper {
+    /* background-color: #b01116 !important; */
+    /* background-color: #544fc3 !important; */
+    /* background-color: #5f58f1 !important; */
+    background-color: #5f59e4 !important;
+    /* background-color: #605bcc !important; */
+
+}
+/* .ListIcon {
+    color: #ffff !important;
+} */
+
+/* .css-14qfvxe-MuiTypography-root {
+    color: #ffff !important;
+} */
+
+/* .css-1edfpdg-MuiTypography-root:hover {
+    color: #971010 !important;
+    font-weight: bold;
+} */
+
+li.MuiListItem-root.MuiListItem-gutters.MuiListItem-padding.css-9lhzm2-MuiListItem-root {
+    height: 50px;
+    padding: 0px 10px 0px 10px !important;
+}
+.css-cveggr-MuiListItemIcon-root {
+    min-width: 35px !important;
+}
+
+/* .css-1mr72ws-MuiListItem-root .ListDiv:hover {
+    background: #ffff !important;
+    color: #971010 !important;
+} */
+/* .css-qy3cfz-MuiListItem-root .ListDiv:hover {
+    background: #ffff !important;
+    color: #971010 !important;
+} */
