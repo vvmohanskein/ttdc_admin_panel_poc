@@ -3,7 +3,7 @@ import { useFormik } from 'formik';
 import * as Yup from 'yup';
 import { TextField, Button, Checkbox, Typography, Link, Box, Paper } from '@mui/material';
 import { styled } from '@mui/system';
-import './Login.css';
+import './login.css';
 import "@fontsource/montserrat";
 import { ToastContainer, toast } from 'react-toastify';
   import 'react-toastify/dist/ReactToastify.css';
