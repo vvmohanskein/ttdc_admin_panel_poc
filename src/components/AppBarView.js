@@ -43,7 +43,7 @@ const AppBarView = () => {
                     <NotificationsIcon sx={{ color: '#5f59e4' }} />
                 </IconButton>
                 <Avatar
-                    src={require('../Components/Logo.png')}
+                    src={require('./Logo.png')}
                     sx={{ ml: 2, cursor: 'pointer' }} // Add cursor pointer for better UX
                     onClick={handleMenuClick} // Open the menu on avatar click
                 >
