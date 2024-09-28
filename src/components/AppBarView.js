@@ -5,7 +5,8 @@ import { useNavigate } from 'react-router-dom';
 
 const drawerWidth = 240;
 
-const AppBarView = () => {
+export function AppBarView(){
+// const AppBarView = () => {
     const [anchorEl, setAnchorEl] = useState(null); // State to manage the menu anchor
 
     // Function to handle opening the menu
@@ -93,4 +94,4 @@ const AppBarView = () => {
     );
 }
 
-export default AppBarView;
+// export default AppBarView;

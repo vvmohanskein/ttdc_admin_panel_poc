@@ -20,15 +20,15 @@ import {
   Search as SearchIcon
 } from "@mui/icons-material";
 import AddIcon from "@mui/icons-material/Add";
-// import Sidebar from "../Sidebar";
-import Sidebar from "../Sidebar"
 import { Link, useNavigate } from "react-router-dom";
-import AppBarView from "../AppBarView";
 import { eventsGetApi } from "../../API/api";
 import Modal from "@mui/material/Modal";
 import axios from "axios";
 import { toast } from "react-toastify";
 import "./Event.css";
+import { AppBarView } from "../AppBarView";
+import { Sidebar } from "../Sidebar";
+
 
 function Event() {
   const [cards, setCards] = useState([]);

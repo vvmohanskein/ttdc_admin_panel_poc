@@ -24,7 +24,7 @@ import axios from "axios";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
-function AddEvent() {
+export function AddEvent() {
   const location = useLocation();
   const locationData = location?.state?.card;
   const locationDataPdf = location?.state?.pdfUrl;
@@ -513,4 +513,4 @@ function AddEvent() {
   );
 }
 
-export default AddEvent;
+// export default AddEvent;

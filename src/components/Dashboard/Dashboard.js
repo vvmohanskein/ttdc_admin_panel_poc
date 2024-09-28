@@ -9,7 +9,7 @@ import { PieChart } from '@mui/x-charts/PieChart';
 
 const drawerWidth = 240;
 
-function Dashboard() {
+export function Dashboard() {
   return (
     <Box sx={{ display: 'flex' }}>
       <CssBaseline />
@@ -73,4 +73,3 @@ function Dashboard() {
   );
 }
 
-export default Dashboard;
