@@ -4,6 +4,7 @@ import NotificationsIcon from '@mui/icons-material/Notifications';
 import Sidebar from '../Sidebar';
 import LogoImage from '../Logo.png'
 import AppBarView from '../AppBarView';
+import { PieChart } from '@mui/x-charts/PieChart';
 
 
 const drawerWidth = 240;
@@ -33,39 +34,40 @@ function Dashboard() {
         <Box sx={{ display: 'flex', justifyContent: 'space-between', mb: 4 }}>
           <Box sx={{ p: 2, bgcolor: 'white', width: '24%', textAlign: 'center', boxShadow: 1, borderRadius: 2 }}>
             <Typography>Total Distributors</Typography>
-            <Typography variant="h4">435</Typography>
+            <Typography variant="h5">435</Typography>
           </Box>
           <Box sx={{ p: 2, bgcolor: 'white', width: '24%', textAlign: 'center', boxShadow: 1, borderRadius: 2 }}>
             <Typography>Total Users</Typography>
-            <Typography variant="h4">12454</Typography>
+            <Typography variant="h5">12454</Typography>
           </Box>
           <Box sx={{ p: 2, bgcolor: 'white', width: '24%', textAlign: 'center', boxShadow: 1, borderRadius: 2 }}>
             <Typography>Total Products</Typography>
-            <Typography variant="h4">300+</Typography>
+            <Typography variant="h5">300+</Typography>
           </Box>
           <Box sx={{ p: 2, bgcolor: 'white', width: '24%', textAlign: 'center', boxShadow: 1, borderRadius: 2 }}>
             <Typography>Unresponded Queries</Typography>
-            <Typography variant="h4">538</Typography>
+            <Typography variant="h5">538</Typography>
           </Box>
         </Box>
 
         {/* Graphs */}
-        <Box sx={{ display: 'flex', justifyContent: 'space-between' }}>
-          <Box sx={{ width: '48%', bgcolor: 'white', p: 3, borderRadius: 2, boxShadow: 1 }}>
-            <Typography variant="h6">Number of New Users</Typography>
-            {/* Insert Chart Here */}
-            <Box sx={{ mt: 2 }}>
-              <img src="/path/to/chart.png" alt="Chart 1" style={{ width: '100%' }} />
-            </Box>
-          </Box>
-          <Box sx={{ width: '48%', bgcolor: 'white', p: 3, borderRadius: 2, boxShadow: 1 }}>
-            <Typography variant="h6">Number of Users Visits</Typography>
-            {/* Insert Chart Here */}
-            <Box sx={{ mt: 2 }}>
-              <img src="/path/to/chart.png" alt="Chart 2" style={{ width: '100%' }} />
-            </Box>
-          </Box>
-        </Box>
+       <Box>
+       <PieChart
+      series={[
+        {
+          innerRadius: 30,
+          outerRadius: 100,
+          data: [
+            { id: 0, value: 10, label: 'New Visitors' },
+            { id: 1, value: 15, label: 'Old Visitors' },
+            { id: 2, value: 20, label: 'Recent Visitors' },
+          ],
+        },
+      ]}
+      width={600}
+      height={200}
+    />
+       </Box>
       </Box>
     </Box>
   );

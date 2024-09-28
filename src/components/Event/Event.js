@@ -73,7 +73,17 @@ const handleClose = () => setOpen(false);
     const numberId = id.slice(4); 
 console.log(numberId);
     
-    navigate(`/admin/EditEvent/${numberId}`,{state:card})
+axios.get(`https://demo.emeetify.com:81/tourism/places/getplaces?PlaceId=${numberId}&source=socketio&lang=en`)
+.then((response)=>{
+     console.log(response?.data?.data?.[0]?.WebUrl);
+     const pdfUrl = response?.data?.data?.[0]?.WebUrl
+     navigate(`/admin/EditEvent/${numberId}`,{state:{card, pdfUrl}})
+
+}).catch((error)=>{
+  console.log(error);
+  
+})
+    // navigate(`/admin/EditEvent/${numberId}`,{state:card})
 
     console.log(`Edit card at index ${index}`);
 

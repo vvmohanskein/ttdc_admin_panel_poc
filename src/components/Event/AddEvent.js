@@ -26,10 +26,15 @@ import 'react-toastify/dist/ReactToastify.css';
 
 function AddEvent() {
   const location = useLocation();
-  const locationData = location?.state;
+  const locationData = location?.state?.card;
+  const locationDataPdf  = location?.state?.pdfUrl;
+  console.log(locationDataPdf);
+  
   const parms = useParams();
   const [file, setFile] = useState(null);
+  const [pdfFile, setPdfFile] = useState(null);
   const [dummyState, setDummyState] = useState(false);
+  const [dummyStatePdf, setDummyStatePdf] = useState(false);
   const [loading, setLoading] = useState(false); // <-- Add state for loader
 
 const navigate= useNavigate()
@@ -37,6 +42,7 @@ const navigate= useNavigate()
   useEffect(() => {
     if (parms && locationData) {
       handleConvertToFile();
+      handleConvertPdfFile()
     }
   }, [parms, locationData]);
 
@@ -53,6 +59,19 @@ const navigate= useNavigate()
     }
   };
 
+  const handleConvertPdfFile = async () => {
+    try {
+      const response = await fetch(locationDataPdf);
+      if (!response.ok) throw new Error('Failed to fetch image');
+
+      const blob = await response.blob();
+      const newFile = new File([blob], 'content.pdf', { type: blob.type });
+      setPdfFile(newFile)
+
+    } catch (error) {
+      console.error('Error fetching and converting image:', error);
+    }
+  };
   const initialValues = {
     placeName: parms && locationData ? locationData.title : '',
     image: null,
@@ -241,6 +260,9 @@ const navigate= useNavigate()
               if (parms && locationData && !dummyState) {
                 values.image = file;
               }
+              if(parms && locationDataPdf && !dummyStatePdf){
+                values.pdf = pdfFile
+              }
 
               return (
                 <Form>
@@ -368,6 +390,9 @@ const navigate= useNavigate()
                         type="file"
                         onChange={(event) => {
                           const file = event.currentTarget.files[0];
+                          setPdfFile(file);
+                          setDummyStatePdf(true);
+                         
                           setFieldValue('pdf', file);
                         }}
                       />
@@ -392,9 +417,27 @@ const navigate= useNavigate()
                       </label>
 
                       {values.pdf && (
+                        <Card>
+                          {/* <CardMedia
+                          className='CardMediaImage'
+                          component="iframe"
+                          
+                          src={values.pdf instanceof File ? URL.createObjectURL(values.pdf) :  URL.createObjectURL(pdfFile)}
+                          alt="Selected"
+                          sx={{
+                            maxHeight: '200px',
+                            borderRadius: '10px',
+                            border: '2px solid #3f51b5',
+                            transition: 'transform 0.2s',
+                            '&:hover': {
+                              transform: 'scale(1.05)',
+                            },
+                          }}
+                        /> */}
                         <Typography variant="body2" mt={2} sx={{ fontFamily: 'Montserrat', fontWeight: 'medium', color: '#555', fontSize: '0.875rem' }}>
                           Selected PDF: <strong>{values.pdf.name}</strong>
                         </Typography>
+                        </Card>
                       )}
                     </Grid>
                   </Grid>
@@ -417,7 +460,7 @@ const navigate= useNavigate()
                           },
                         }}
                       >
-                                                {loading ? <CircularProgress size={24} sx={{ color: '#fff' }} /> : 'Submit'} {/* <-- Show loader */}
+                                                {loading ? <CircularProgress size={24} sx={{ color: '#fff' }} /> : 'Submit'} 
 
                         {/* Submit */}
                       </Button>
