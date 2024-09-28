@@ -26,11 +26,11 @@ import Modal from "@mui/material/Modal";
 import axios from "axios";
 import { toast } from "react-toastify";
 import "./Event.css";
-import { AppBarView } from "../AppBarView";
-import { Sidebar } from "../Sidebar";
+import Sidebar from "../Sidebar";
+import AppBarView from "../AppBarView";
 
 
-function Event() {
+export function Event() {
   const [cards, setCards] = useState([]);
   const [originalCards, setOriginalCards] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
@@ -357,4 +357,4 @@ function Event() {
   );
 }
 
-export default Event;
+// export default Event;

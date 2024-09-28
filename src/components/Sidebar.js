@@ -45,7 +45,8 @@ const StyledListItem = styled(ListItem)(({ theme }) => ({
   },
 }));
 
-export function Sidebar(){
+const Sidebar = () => {
+
   const location = useLocation();
   const [activeBar, setActiveBar]= useState("dashboard")
 
@@ -119,3 +120,4 @@ export function Sidebar(){
   );
 }
 
+export default Sidebar;
