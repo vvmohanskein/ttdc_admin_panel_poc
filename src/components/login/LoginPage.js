@@ -39,7 +39,8 @@ const StyledTextField = styled(TextField)({
   },
 });
 
-const LoginPage = () => {
+export function LoginPage(){
+// const AdminPage = () => {
 
 
   const [snackPopup, setSnackPopup] = React.useState({
@@ -197,4 +198,4 @@ const LoginPage = () => {
   );
 };
 
-export default LoginPage;
+// export default AdminPage;
