@@ -1,10 +1,10 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
-import { LoginPage } from './Components/Login/AdminPage';
 import { Dashboard } from './Components/Dashboard/Dashboard';
 import { AddEvent } from './Components/Event/AddEvent';
 import { Event } from './Components/Event/Event';
+import { LoginPage } from './Components/Login/LoginPage';
 
 
 function App() {
