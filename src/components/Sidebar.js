@@ -8,7 +8,7 @@ import { styled } from '@mui/material/styles';
 import LogoImage from './Logo.png'
 import { Link,useLocation} from 'react-router-dom';
 import { useState,useEffect } from 'react';
-import BusinessCenterIcon from '@material-ui/icons/BusinessCenter';
+// import EventSeatIcon from '@material-ui/icons/EventSeat';
 
 import './Sidebar.css';
 
@@ -101,11 +101,11 @@ const Sidebar = () => {
       <List>
         {[
           { text: 'Dashboard', icon: <DashboardIcon />, link: '/admin/dashboard' },
-          { text: 'Events', icon: <BusinessCenterIcon />, link: '/admin/events' },
+          { text: 'Events', icon: <GroupIcon />, link: '/admin/events' },
           { text: 'Users', icon: <GroupIcon />, link: '/admin/users' },
           { text: 'Ads & Posts', icon: <InsertChartIcon />, link: '/admin/ads' },
           { text: 'Reports', icon: <InsertChartIcon />, link: '/admin/reports' },
-          { text: 'Admin Users', icon: <GroupIcon />, link: '/admin/admin-users' },
+          { text: 'Admin Users', icon: <GroupIcon />, link: '/admin/admin-user' },
           { text: 'Feedbacks', icon: <FeedbackIcon />, link: '/admin/feedbacks' },
         ].map((item, index) => (
           <Link to={item.link} style={{ textDecoration: 'none' }} key={item.text}>

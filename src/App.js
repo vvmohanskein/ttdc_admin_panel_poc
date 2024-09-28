@@ -1,5 +1,5 @@
 import React from 'react';
-import AdminLogin from './Components/Login/AdminPage';  // Import the AdminLogin component
+import LoginPage from './Components/Login/AdminPage';  // Import the LoginPage component
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Dashboard from './Components/Dashboard/Dashboard';
 import Event from './Components/Event/Event';
@@ -10,7 +10,7 @@ function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<AdminLogin />} />
+        <Route path="/" element={<LoginPage />} />
         <Route path="/admin/dashboard" element={<Dashboard />} />
         <Route path="/admin/events" element={<Event />} />
         <Route path="/admin/AddEvent" element={<AddEvent />} />

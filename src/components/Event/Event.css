@@ -1,9 +1,17 @@
 .CardMediaImage {
-    max-height: 100% !important;
+   min-height: 10rem;
+   max-height: 10rem;
+   min-width: 15rem;
+   max-width: 15rem;
 }
 
 label.PDFLabel {
     margin-left: 10px;
+}
+.allign-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .delete-btn-yes{
     background-color: darkred !important;

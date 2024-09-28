@@ -32,19 +32,19 @@ function Dashboard() {
       >
         {/* Dashboard Content */}
         <Box sx={{ display: 'flex', justifyContent: 'space-between', mb: 4 }}>
-          <Box sx={{ p: 2, bgcolor: 'white', width: '24%', textAlign: 'center', boxShadow: 1, borderRadius: 2 }}>
+          <Box sx={{ p: 2,borderLeft:"2px solid orangered", bgcolor: 'white', width: '24%', textAlign: 'center', boxShadow: 1, borderRadius: 2 }}>
             <Typography>Total Distributors</Typography>
             <Typography variant="h5">435</Typography>
           </Box>
-          <Box sx={{ p: 2, bgcolor: 'white', width: '24%', textAlign: 'center', boxShadow: 1, borderRadius: 2 }}>
+          <Box sx={{ p: 2,borderLeft:"2px solid orangered", bgcolor: 'white', width: '24%', textAlign: 'center', boxShadow: 1, borderRadius: 2 }}>
             <Typography>Total Users</Typography>
             <Typography variant="h5">12454</Typography>
           </Box>
-          <Box sx={{ p: 2, bgcolor: 'white', width: '24%', textAlign: 'center', boxShadow: 1, borderRadius: 2 }}>
+          <Box sx={{ p: 2,borderLeft:"2px solid orangered", bgcolor: 'white', width: '24%', textAlign: 'center', boxShadow: 1, borderRadius: 2 }}>
             <Typography>Total Products</Typography>
             <Typography variant="h5">300+</Typography>
           </Box>
-          <Box sx={{ p: 2, bgcolor: 'white', width: '24%', textAlign: 'center', boxShadow: 1, borderRadius: 2 }}>
+          <Box sx={{ p: 2,borderLeft:"2px solid orangered", bgcolor: 'white', width: '24%', textAlign: 'center', boxShadow: 1, borderRadius: 2 }}>
             <Typography>Unresponded Queries</Typography>
             <Typography variant="h5">538</Typography>
           </Box>
