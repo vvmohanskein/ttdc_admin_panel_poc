@@ -437,6 +437,25 @@ export function AddEvent() {
 
                       {values.pdf && (
                         <Card>
+                             {/* <CardMedia
+                              className="CardMediaImage"
+                              component="iframe"
+                              src={
+                                values.pdf instanceof File
+                                  ? URL.createObjectURL(values.pdf)
+                                  : `${locationDataPdf}`
+                              }
+                              alt="Selected"
+                              sx={{
+                                maxHeight: "200px",
+                                borderRadius: "10px",
+                                border: "2px solid #3f51b5",
+                                transition: "transform 0.2s",
+                                "&:hover": {
+                                  transform: "scale(1.05)"
+                                }
+                              }}
+                            /> */}
                           <Typography
                             variant="body2"
                             mt={2}
@@ -473,7 +492,7 @@ export function AddEvent() {
                         }}
                       >
                         {loading ? (
-                          <CircularProgress size={24} sx={{ color: "#fff" }} />
+                          <CircularProgress size={24} sx={{ color: " #5f58f1" }} />
                         ) : (
                           "Submit"
                         )}

@@ -6,6 +6,14 @@
     width: 80%;
     max-width: 350px !important;
 }
+.password-div{
+    position: relative;
+}
+.eye_icon_open{
+    position: absolute;
+    top: 30px;
+    right: 6px;
+}
 
 .css-1vmdpmw {
     padding: 13% !important;

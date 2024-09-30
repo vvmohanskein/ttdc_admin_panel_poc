@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
 import { TextField, Button, Checkbox, Typography, Link, Box, Paper } from '@mui/material';
@@ -9,7 +9,8 @@ import { ToastContainer, toast } from 'react-toastify';
   import 'react-toastify/dist/ReactToastify.css';
 import { loginAPI } from '../../API/api';
 import { useNavigate } from 'react-router-dom';
-
+import VisibilityIcon from '@mui/icons-material/Visibility';
+import VisibilityOffIcon from '@mui/icons-material/VisibilityOff';
 // Styled components for modern UI elements
 const StyledButton = styled(Button)({
   // backgroundColor: '#0061F2',
@@ -50,7 +51,7 @@ export function LoginPage(){
     message :""
   });
   const { vertical, horizontal, open } = snackPopup;
-
+const [passwordOpen,setPasswordOpen] = useState(false)
   const navigate= useNavigate()
   const handleClose = () => {
     setSnackPopup({ ...snackPopup, open: false });
@@ -158,12 +159,14 @@ export function LoginPage(){
               autoFocus
               variant="outlined"
             />
+            <div className='password-div'>
             <StyledTextField
               margin="normal"
               required
+              className='password-field'
               fullWidth
               label="Password"
-              type="password"
+              type={passwordOpen ? "text":"password"}
               name="password"
               value={formik.values.password}
               onChange={formik.handleChange}
@@ -173,7 +176,12 @@ export function LoginPage(){
               autoComplete="current-password"
               variant="outlined"
             />
-
+{
+  passwordOpen ? <VisibilityIcon onClick={()=>{setPasswordOpen(false)}} className='eye_icon_open'/>
+: <VisibilityOffIcon  onClick={()=>{setPasswordOpen(true)}} className='eye_icon_open'/>
+}
+            </div>
+           
             <Link href="#" variant="body2" sx={{ display: 'block', textAlign: 'right', mt: 1 }}>
               Forgot Password?
             </Link>

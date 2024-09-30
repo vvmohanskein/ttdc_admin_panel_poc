@@ -65,6 +65,8 @@ const Sidebar = () => {
 },[location]);
 
   return (
+    <div     className='drawer_class'
+>
     <Drawer
       sx={{
         width: drawerWidth,
@@ -117,6 +119,7 @@ const Sidebar = () => {
         ))}
       </List>
     </Drawer>
+    </div>
   );
 }
 

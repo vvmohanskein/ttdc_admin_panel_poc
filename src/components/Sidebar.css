@@ -20,12 +20,15 @@ body {
 /* .css-lsr6u8-MuiDrawer-docked .MuiDrawer-paper {
     background-color: #971010 !important;
 } */
+ .drawer_class .css-lsr6u8-MuiDrawer-docked .MuiDrawer-paper  {
+    background-color: #5f58f1 !important;
+ }
 
 .css-lsr6u8-MuiDrawer-docked .MuiDrawer-paper {
     /* background-color: #b01116 !important; */
     /* background-color: #544fc3 !important; */
-    /* background-color: #5f58f1 !important; */
-    background-color: #5f59e4 !important;
+    background-color: #5f58f1 !important;
+    /* background-color: #5f59e4 !important; */
     /* background-color: #605bcc !important; */
 
 }
