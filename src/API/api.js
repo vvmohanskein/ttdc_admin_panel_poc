@@ -6,5 +6,5 @@ export const loginAPI = async (data) => {
 }
 
 export const eventsGetApi = async ()=>{
-    return await axios.get(`https://demo.emeetify.com:81/tourism/category/getEvents?CategoryId=1&currentPage=1&itemsPerPage=4&source=socketio&lang=en`)
+    return await axios.get(`https://demo.emeetify.com:81/tourism/category/getEvents?CategoryId=1&currentPage=1&itemsPerPage=10&source=socketio&lang=en`)
 }
