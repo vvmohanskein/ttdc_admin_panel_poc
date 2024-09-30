@@ -105,7 +105,7 @@ const [passwordOpen,setPasswordOpen] = useState(false)
       <Box
         sx={{
           flex: 1,
-          backgroundImage: 'url(https://ttdc.skeintech.com/static/media/bgimg-1.9357b731d5009007d44d.jpg)', // Replace with your image URL
+          backgroundImage: 'url(https://ttdc.skeintech.com/static/media/bgimg-1.9357b731d5009007d44d.jpg)', 
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           display: 'flex',

@@ -165,7 +165,7 @@ export function AddEvent() {
               setLoading(false);
               toast.success(response.data.message);
 
-              setTimeout(() => toast.success(response.data.message), 3000);
+              // setTimeout(() => toast.success(response.data.message), 3000);
               navigate("/admin/events");
             }
             if (response?.data?.status === false) {
