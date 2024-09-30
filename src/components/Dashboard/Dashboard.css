@@ -3,3 +3,8 @@
     width: 100px !important;
     height: 80px !important;
 }
+.chart-main-div-dashboard{
+    display: flex;
+    width: 100% !important;
+    flex-direction: row;
+}

@@ -52,6 +52,24 @@ export function Dashboard() {
         </Box>
 
         {/* Graphs */}
+        <div className='chart-main-div-dashboard'>
+        <Box>
+       <PieChart
+      series={[
+        {
+          innerRadius: 30,
+          outerRadius: 100,
+          data: [
+            { id: 0, value: 10, label: 'New Visitors' },
+            { id: 1, value: 15, label: 'Old Visitors' },
+            { id: 2, value: 20, label: 'Recent Visitors' },
+          ],
+        },
+      ]}
+      width={600}
+      height={200}
+    />
+       </Box>
        <Box>
        <PieChart
       series={[
@@ -69,6 +87,9 @@ export function Dashboard() {
       height={200}
     />
        </Box>
+
+        </div>
+      
       </Box>
     </Box>
   );
