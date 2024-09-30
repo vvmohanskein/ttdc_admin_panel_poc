@@ -4,7 +4,23 @@
     height: 80px !important;
 }
 .chart-main-div-dashboard{
-    display: flex;
+    display: flex !important;
     width: 100% !important;
-    flex-direction: row;
+    flex-direction: row !important;
+}
+.pie-chart_box{
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 10px !important;
+}
+
+.pie-chart_box h3{
+text-align: center !important;
+}
+.line-chart_box{
+    margin-left: 10px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 10px !important;
+}
+.line-chart_box h3{
+    text-align: center !important;
 }

@@ -5,6 +5,7 @@ import { Dashboard } from './components/Dashboard/Dashboard';
 import { AddEvent } from './components/Event/AddEvent';
 import { Event } from './components/Event/Event';
 import { LoginPage } from './components/login/LoginPage';
+import { Ads } from './components/Ads/Ads';
 
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
         <Route path="/admin/dashboard" element={<Dashboard />} />
         <Route path="/admin/events" element={<Event />} />
         <Route path="/admin/AddEvent" element={<AddEvent />} />
+<Route path='/admin/ads' element={<Ads/>}/>
         <Route path="/admin/EditEvent/:id" element={<AddEvent />} />
 
         {/* You can add more routes here, like the dashboard */}
