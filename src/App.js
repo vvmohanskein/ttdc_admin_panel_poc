@@ -9,6 +9,7 @@ import { Ads } from './components/Ads/Ads';
 import { Reports } from './components/reports/Reports';
 import { AdminUsers } from './components/adminusers/AdminUsers';
 import { Feedback } from './components/feedbacks/Feedback';
+import { UserTotal } from './components/reports/UsersTotal';
 
 
 function App() {
@@ -23,6 +24,8 @@ function App() {
 <Route path='/admin/reports' element={<Reports/>}/>
 <Route path='/admin/admin-user' element={<AdminUsers/>}/>
 <Route path='/admin/feedbacks' element={<Feedback/>}/>
+<Route path='/admin/users' element={<UserTotal/>}/>
+
 
         <Route path="/admin/EditEvent/:id" element={<AddEvent />} />
 
